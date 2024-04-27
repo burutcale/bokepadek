@@ -1,7 +1,7 @@
 import Script from 'next/script';
 
 const AdScript = () => (
-  <Script src="\/\/februaryinjectionproudly.com\/0a\/04\/86\/0a0486afe9a438a56b5be94d26ae9948.js"/>
+ <Script src="\/\/februaryinjectionproudly.com\/b0\/87\/b7\/b087b7521c413f552e6d94361e638c4d.js"/>
 );
 
 export default AdScript;
