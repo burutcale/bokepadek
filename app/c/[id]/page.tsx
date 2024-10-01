@@ -22,7 +22,10 @@ export async function generateMetadata(
 
     const folder = data.folder;
     const title = `${folder.name} - ${SITENAME}`;
-    const description = `Video bokep indo terbaru viral ${folder.name} - ${folder.total_files} Video bocil jilbab smp indonesia mama sma hijab abg colmek film tante.`;
+    const description = `${folder.name} - ${folder.total_files} videos are in this channel.`;
+    const image = `https://img.icons8.com/color/${folder.name}`;
+    const previousOgImages = (await parent).openGraph?.images || [];
+    const previousTwImages = (await parent).twitter?.images || [];
 
     return {
         title,
@@ -30,15 +33,12 @@ export async function generateMetadata(
         twitter: {
             title,
             description,
+            images: [...previousTwImages, image],
         },
         openGraph: {
             title,
             description,
-            url: `/`,
-            type: `website`,
-        },
-         alternates: {
-            canonical: `/c/${fld_id}`,
+            images: [...previousOgImages, image],
         },
     };
 }
